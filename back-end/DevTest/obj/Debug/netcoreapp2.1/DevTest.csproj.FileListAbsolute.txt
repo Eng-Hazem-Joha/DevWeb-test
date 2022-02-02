@@ -1,0 +1,14 @@
+C:\Users\hazem\source\repos\DevTest\DevTest\bin\Debug\netcoreapp2.1\DevTest.deps.json
+C:\Users\hazem\source\repos\DevTest\DevTest\bin\Debug\netcoreapp2.1\DevTest.runtimeconfig.json
+C:\Users\hazem\source\repos\DevTest\DevTest\bin\Debug\netcoreapp2.1\DevTest.runtimeconfig.dev.json
+C:\Users\hazem\source\repos\DevTest\DevTest\bin\Debug\netcoreapp2.1\DevTest.dll
+C:\Users\hazem\source\repos\DevTest\DevTest\bin\Debug\netcoreapp2.1\DevTest.pdb
+C:\Users\hazem\source\repos\DevTest\DevTest\obj\Debug\netcoreapp2.1\DevTest.csproj.CoreCompileInputs.cache
+C:\Users\hazem\source\repos\DevTest\DevTest\obj\Debug\netcoreapp2.1\DevTest.RazorAssemblyInfo.cache
+C:\Users\hazem\source\repos\DevTest\DevTest\obj\Debug\netcoreapp2.1\DevTest.RazorAssemblyInfo.cs
+C:\Users\hazem\source\repos\DevTest\DevTest\obj\Debug\netcoreapp2.1\DevTest.AssemblyInfoInputs.cache
+C:\Users\hazem\source\repos\DevTest\DevTest\obj\Debug\netcoreapp2.1\DevTest.AssemblyInfo.cs
+C:\Users\hazem\source\repos\DevTest\DevTest\obj\Debug\netcoreapp2.1\DevTest.RazorTargetAssemblyInfo.cache
+C:\Users\hazem\source\repos\DevTest\DevTest\obj\Debug\netcoreapp2.1\DevTest.dll
+C:\Users\hazem\source\repos\DevTest\DevTest\obj\Debug\netcoreapp2.1\DevTest.pdb
+C:\Users\hazem\source\repos\DevTest\DevTest\obj\Debug\netcoreapp2.1\DevTest.csprojAssemblyReference.cache
