@@ -4,7 +4,7 @@ import { Button, Modal } from 'react-bootstrap';
 
 class Employees extends Component {
 
-  baseURL = 'https://jsonplaceholder.typicode.com/todos/';
+  baseURL = "http://localhost:57833/api/";
 
   state = {
     emps: [],
@@ -33,13 +33,24 @@ class Employees extends Component {
       <table className="table table-hover">
         <thead>
           <tr>
-            <th>title</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Address</th>
+          <th>E-mail</th>
+          <th>Birth Date</th>
+          <th>Phone Number</th>
           </tr>
         </thead>
         <tbody>
         {this.state.emps?.map((emp, i) => (
             <tr onClick={() => this.handleShow(emp, i)}>
-              <td>{emp.title}</td>
+              <td> {emp.empFirstName} </td>
+            <td>{emp.empLastName}</td>
+            <td>{emp.empAddress}</td>
+
+            <td>{emp.empEmail}</td>
+            <td>{emp.empBirthDate}</td>
+            <td>{emp.empPhoneNumber}</td>
             </tr>
           ))}
 
@@ -53,9 +64,34 @@ class Employees extends Component {
         </Modal.Header>
         <Modal.Body>
           <input
-            name="title"
-            value={this.state.tempEmp.title}
+            name="empFirstName"
+            value={this.state.tempEmp.empFirstName}
             onChange={this.changeHandle}/>
+             <input
+            name="empLastName"
+            value={this.state.tempEmp.empLastName}
+            onChange={this.changeHandle}/>
+             <input
+            name="empAddress"
+            value={this.state.tempEmp.empAddress}
+            onChange={this.changeHandle}/>
+             <input
+            name="empEmail"
+            value={this.state.tempEmp.empEmail}
+            onChange={this.changeHandle}/>
+             <input
+            name="empPhoneNumber"
+            value={this.state.tempEmp.empPhoneNumber}
+            onChange={this.changeHandle}/>
+             <input
+            name="empBirthDate"
+            value={this.state.tempEmp.empBirthDate}
+            onChange={this.changeHandle}/>
+             <input type="number"
+            name="departmentId"
+            value={this.state.tempEmp.departmentId}
+            onChange={this.changeHandle}/>
+
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={this.handleClose}>
@@ -71,7 +107,7 @@ class Employees extends Component {
   }
 
   async componentDidMount () {
-    const {data: emps} = await axios.get(this.baseURL);
+    const {data: emps} = await axios.get(this.baseURL + 'employee');
     console.log(emps);
     this.setState({emps});
   }
@@ -85,7 +121,9 @@ class Employees extends Component {
 
   SaveData = async () => {
     const {tempEmp: emp} = this.state;
-    const result = await axios.put(this.baseURL + emp.id, emp);
+    const temp = {...emp};
+    delete temp.empId;
+    const result = await axios.put(this.baseURL + 'employee/' + emp.empId, temp);
     const emps = [...this.state.emps];
     const index = emp._index;
     emps[index] = {...emp};
